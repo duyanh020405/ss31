@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Find the longest word within a string</title>
+<script>
+function find_longest_word(str)
+{
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  var kq = array1[0];
+
+  for(var x = 1 ; x < array1.length ; x++)
+  {
+    if(kq.length < array1[x].length)
+    {
+    kq = array1[x];
+    } 
+  }
+  return kq;
+}
+document.write(find_longest_word('Web Development mdbddgdfdv bdbdbdggdgdgdg Tutorial'));
+</script>
+
+</head>
+<body>
+  
+</body>
+</html> 
